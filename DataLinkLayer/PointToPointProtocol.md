@@ -1,4 +1,4 @@
-#Point to Point Protocol
+# Point to Point Protocol
 
 
 **1.点对点协议帧格式**
@@ -10,10 +10,11 @@
 (4) 协议：定义数据字段中携带的数据类型
 (5) 数据：长度可变，最大不超过1500B(MTU)
 (6) 校验：FCS，用于CRC校验
-
-	注意：透明传输
-	字节填充：异步传输时转义字符为0x7D。填充方法：0x7E转变成(0x7D,0x5E),0x7D转变成(0x7D,0x5D)，ASCII码的控制字符，即小于0x20的字符，如0x03变成(0x7D,0x23)。
-
+```
+注意：透明传输
+字节填充：异步传输时转义字符为0x7D。填充方法：0x7E转变成(0x7D,0x5E),0x7D转变成(0x7D,0x5D)，
+ASCII码的控制字符，即小于0x20的字符，如0x03变成(0x7D,0x23)。
+```
 **2.PPP(Point to Point Protocol)**
 
 >在点对点连接传输多协议数据包提供一个标准方法，它是一个协议集合，是一种在串行链路上传输的IP数据包流行方法，被DSL大量广泛使用
@@ -38,4 +39,14 @@ e.CHAP(Challenge Handshake Authentication Protocol，查询-握手认证协议):
 
 >PPP协议是目前广域网上应用最广泛的协议之一，它的优点在于简单、具备用户验证能力、可以解决IP分配等。
 
-家庭拨号上网就是通过PPP在用户端和运营商的接入服务器之间建立通信链路。 目前，宽带接入正在成为取代拨号上网的趋势，在宽带接入技术日新月异的今天，PPP也衍生出新的应用。典型的应用是在ADSL（非对称数据用户环线，Asymmetrical Digital Subscriber Loop）接入方式当中，PPP与其他的协议共同派生出了符合宽带接入要求的新的协议，如PPPoE（PPP over Ethernet），PPPoA（PPP over ATM）。利用以太网（Ethernet）资源，在以太网上运行PPP来进行用户认证接入的方式称为PPPoE。PPPoE即保护了用户方的以太网资源，又完成了ADSL的接入要求，是目前ADSL接入方式中应用最广泛的技术标准。同样，在ATM（异步传输模式，Asynchronous Transfer Mode）网络上运行PPP协议来管理用户认证的方式称为PPPoA。它与PPPoE的原理相同，作用相同；不同的是它是在ATM网络上，而PPPoE是在以太网网络上运行，所以要分别适应ATM标准和以太网标准。
+```
+家庭拨号上网就是通过PPP在用户端和运营商的接入服务器之间建立通信链路。 目前，宽带接入正在成为取
+代拨号上网的趋势，在宽带接入技术日新月异的今天，PPP也衍生出新的应用。典型的应用是在ADSL（非对称
+数据用户环线，Asymmetrical Digital Subscriber Loop）接入方式当中，PPP与其他的协议共同派生出
+了符合宽带接入要求的新的协议，如PPPoE（PPP over Ethernet），PPPoA（PPP over ATM）。利用以太
+网（Ethernet）资源，在以太网上运行PPP来进行用户认证接入的方式称为PPPoE。PPPoE即保护了用户方的
+以太网资源，又完成了ADSL的接入要求，是目前ADSL接入方式中应用最广泛的技术标准。同样，在ATM（异
+步传输模式，Asynchronous Transfer Mode）网络上运行PPP协议来管理用户认证的方式称为PPPoA。它与
+PPPoE的原理相同，作用相同；不同的是它是在ATM网络上，而PPPoE是在以太网网络上运行，所以要分别适
+应ATM标准和以太网标准。
+```
