@@ -49,14 +49,21 @@ Disabled（禁用状态）：这个二层端口不会参与生成树，也不会
 **5.BPDU(Bridge Protocol Data Unit,网桥协议数据单元)**
 
 ![](../images/23.png)
+
+```
 (1)LLC/SNAP(3 byte):固定值为0x424203
 (2)Port(2 byte)：协议号0表示STP,2表示RSTP
 (3)Type(1 byte):与port类似
 (4)Flags(1 byte):
+```
+
 ![](../images/24.png)
+
+```
 (5)根ID:根网桥优先级与mac地址的结合
 (6)PID:优先发送的端口号(指定端口)
 (7)MsgA:消息有效期,当根网桥发送一个BPDU时，他将此字段设置为0，以后非根网桥在此字段加1，用于记录经过网桥的数量
 (8)MaxA:最大有效期,判断拓扑是否改变
 (9)Hello Time:指出配置帧的传输周期
 (10)转发延迟:指出处于学习和侦听状态的时间 
+```
