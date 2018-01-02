@@ -12,9 +12,12 @@ NAPT:
 
 ![](../images/53.png)
 
+<br>
+
 **2.NAT过滤行为**
 
 a.独立于端口(以端口)
+
 ![](../images/54.png)
 
 b.对于依赖地址(以地址Y1)
@@ -25,12 +28,14 @@ c.依赖于地址与端口(以地址X1与端口x1)
 
 ![](../images/56.png)
 
+<br>
+
 **3.NAT穿越**
 
 应对在处于使用NAT设备之间的私有IP网络中的主机之间建立链接
 
-
 (1)打孔(hole punching):只对独立于端口有用
+
 ![](../images/57.png)
 
 (2).STUN（Simple Traversal of UDP over NATs，NAT 的UDP简单穿越）
